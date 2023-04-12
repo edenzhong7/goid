@@ -14,7 +14,7 @@ func init() {
 	}
 	for i := 0; i < typ.NumField(); i++ {
 		f := typ.Field(i)
-		if f.Name == "goid" && f.Type == reflect.TypeOf(int64(0)) {
+		if f.Name == "goid" && (f.Type.Kind() == reflect.Int64 || f.Type.Kind() == reflect.Uint64) {
 			offset = f.Offset
 			break
 		}

@@ -31,3 +31,9 @@ func TestID(t *testing.T) {
 		}
 	}
 }
+
+func BenchmarkID(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		ID()
+	}
+}

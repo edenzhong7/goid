@@ -1,3 +1,6 @@
+//go:build 386 && gc
+//+build 386,gc
+
 #include "textflag.h"
 #include "go_tls.h"
 
