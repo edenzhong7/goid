@@ -1,14 +1,13 @@
 package goid
 
 import (
-	"github.com/fengyoulin/inspect"
 	"reflect"
 )
 
 var offset uintptr
 
 func init() {
-	typ := inspect.TypeOf("runtime.g")
+	typ := TypeOf("runtime.g")
 	if typ == nil {
 		panic("runtime.g not found")
 	}
